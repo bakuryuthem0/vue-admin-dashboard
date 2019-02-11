@@ -1,5 +1,5 @@
 import VueRouter from 'vue-router'
-import Login from '../components/Views/Auth/Login'
+import Login from '../components/Views/Layouts/Login'
 
 const router = new VueRouter({
 	routes: [{
