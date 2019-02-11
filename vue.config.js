@@ -1,6 +1,6 @@
 module.exports = {
-  runtimeCompiler: true,
-  css: {
-    modules: true
-  }
+	runtimeCompiler: true,
+	css: {
+		modules: true
+	}
 }
