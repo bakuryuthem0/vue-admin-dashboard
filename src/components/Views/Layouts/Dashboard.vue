@@ -48,9 +48,10 @@
       </v-btn>
     </v-toolbar>
     <v-content>
-      <v-container fluid>
+      <v-container grid-list-md fluid>
         <v-layout row wrap>
-          <router-view :key="$router.path"></router-view>
+          <router-view :key="$router.path">
+          </router-view>
         </v-layout>
       </v-container>
     </v-content>
