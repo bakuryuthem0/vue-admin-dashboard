@@ -146,6 +146,30 @@
 					</v-flex>
 				</v-layout>
 				<v-layout row wrap my-3>
+					<v-flex xs12>
+						<v-card color="light-green" class="white--text">
+							<v-layout row>
+								<v-flex xs12 ref="barchart">
+									<chart chart-type="Bar" :chart-data="Bars.data" :chart-options="Bars.options"></chart>
+								</v-flex>
+							</v-layout>
+							<v-layout row>
+								<v-flex xs12>
+									<v-card-title class="pb-2" primary-title >
+										<div>
+											<div class="headline mb-2">Daily Sales</div>
+											<div><v-icon class="white--text">trending_up</v-icon> 55% increase in today sales.</div>
+										</div>
+									</v-card-title>
+									<v-card-actions class=" px-3 pt-2">
+										<v-icon class="white--text mr-1">schedule</v-icon> Last updated 5 minutes ago
+									</v-card-actions>
+								</v-flex>
+							</v-layout>
+						</v-card>
+					</v-flex>
+				</v-layout>
+				<v-layout row wrap my-3>
 					<v-flex xs12 md6>
 						<toolbar-card 
 							title="Employees Stats" 
@@ -220,28 +244,6 @@
 									</v-card-title>
 									<v-card-actions class="pa-3">
 										<v-icon class="white--text">schedule</v-icon> updated 5 minutes ago
-									</v-card-actions>
-								</v-flex>
-							</v-layout>
-						</v-card>
-					</v-flex>
-					<v-flex xs12 mb-3>
-						<v-card color="light-green" class="white--text">
-							<v-layout row>
-								<v-flex xs12>
-									<chart chart-type="Bar" :chart-data="Bars.data" :chart-options="Bars.options"></chart>
-								</v-flex>
-							</v-layout>
-							<v-layout row>
-								<v-flex xs12>
-									<v-card-title class="pb-2" primary-title >
-										<div>
-											<div class="headline mb-2">Daily Sales</div>
-											<div><v-icon class="white--text">trending_up</v-icon> 55% increase in today sales.</div>
-										</div>
-									</v-card-title>
-									<v-card-actions class=" px-3 pt-2">
-										<v-icon class="white--text mr-1">schedule</v-icon> Last updated 5 minutes ago
 									</v-card-actions>
 								</v-flex>
 							</v-layout>
@@ -422,13 +424,13 @@
 					data: {
 					  	labels: ['Jan', 'Feb', 'Mar', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
 					    series: [
-						    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-						    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+						    [5, 4, 7, 3, 24, 63, 50, 14, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+						    [3, 2, 7, 3, 24, 63, 50, 14, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
 					  	]
 					},
 					options: {
-						width: 300,
-  					height: 200,
+						width: 1000,
+  						height: 300,
 						seriesBarDistance: 15
 					}
 				},
@@ -438,7 +440,7 @@
 					},
 					options: {
 						width: 300,
-  					height: 200
+  						height: 200
 					}
 				},
 				Donut: {
@@ -448,10 +450,13 @@
 					options: {
 						donut: true,
 						width: 300,
-  					height: 200
+  						height: 200
 					}
 				}
 			}
 		}
 	}
 </script>
+<style lang="scss">
+@import "chartist/dist/scss/chartist.scss";
+</style>
