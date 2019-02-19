@@ -13,6 +13,7 @@
     "@websanova/vue-auth": "^2.21.14-beta",
     "axios": "^0.18.0",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
+    "chartist": "^0.11.0",
     "css-loader": "^2.1.0",
     "dotenv": "^6.2.0",
     "node-sass": "^4.11.0",

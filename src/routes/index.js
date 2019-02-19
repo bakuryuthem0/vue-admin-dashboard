@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router'
 import Login from '../components/Views/Layouts/Login'
 import Dashboard from '../components/Views/Layouts/Dashboard'
+import Home from '../components/Views/Home'
 import ShowClients from '../components/Views/Clients/ShowClients'
 
 const router = new VueRouter({
@@ -12,8 +13,12 @@ const router = new VueRouter({
     {
     	path: '/dashboard',
     	component: Dashboard,
-    	name: 'dashboard',
     	children : [
+			{
+				path: '/',
+                component: Home,
+				name: 'dashboard'
+            },
     		{
     			path: 'clients',
     			component: ShowClients,
